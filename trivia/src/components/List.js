@@ -7,16 +7,16 @@ const List = props => {
     
     return (
         <div>
-            <h1>Age of Empires | Civilizations List</h1>
-            <button onClick={props.getData}>Load Data</button>
-            {props.pokemon.map(item => (<Card key={item.id} pokemon={item} />))}
+            <h1>Trivia Questions!</h1>
+            <button onClick={props.getData}>Load Questions</button>
+            {props.data.map((item, index) => (<Card key={index} data={item} />))}
             {props.error && <p classname='error'>{props.error}</p>}
         </div>
     );
 }
 
 const mapStateToProps = state => ({
-    pokemon: state.pokemon,
+    data: state.data,
     error: state.error
 });
 

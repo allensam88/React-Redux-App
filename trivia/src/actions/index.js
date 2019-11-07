@@ -7,13 +7,13 @@ export const FETCH_FAIL = 'FETCH_FAIL';
 export const getData = () => dispatch => {
     dispatch({ type: FETCH_START });
     axios
-        .get(`https://pokeapi.co/api/v2/pokemon`)
+        .get(`https://opentdb.com/api.php?amount=10`)
         .then(response => {
-            console.log(response);
+            console.log("Response: ", response);
             dispatch({ type: FETCH_SUCCESS, payload: response.data.results })
         })
         .catch(err => {
-            console.log(err);
-            dispatch({ type: FETCH_FAIL, payload: `${err.response.status} ${err.response.data}`})
+            console.log('Error: ', err);
+            dispatch({ type: FETCH_FAIL, payload: err.response})
         });
 };

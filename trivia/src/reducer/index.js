@@ -1,7 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions';
 
 const initialState = {
-    pokemon: [],
+    data: [],
     error: '',
     isFetching: false
 }
@@ -17,7 +17,7 @@ export function reducer (state=initialState, action) {
         case FETCH_SUCCESS:
             return {
                 ...state,
-                pokemon: action.payload,
+                data: action.payload,
                 error: '',
                 isFetching: false
             };
