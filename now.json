@@ -1,0 +1,8 @@
+{
+	"version": 2,
+	"name": "trivia",
+	"builds": [{ "src": "trivia/package.json", "use": "@now/static-build", "config": {"distDir": "build"} }],
+	"routes": [
+		{ "src": "/(.*)", "dest": "trivia/$1" }
+	]
+}
