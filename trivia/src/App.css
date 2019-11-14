@@ -2,21 +2,34 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.title {
+    text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.App-link {
-  color: #09d3ac;
+.card {
+    width: 200px;
+    margin: 20px;
+    padding: 5px;
+    background-color: violet;
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+button {
+    width: 150px;
+    background-color: salmon;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+button:hover {
+    font-weight: bold;
+    background-color: lightgreen;
+    border: 1px solid green;
 }
