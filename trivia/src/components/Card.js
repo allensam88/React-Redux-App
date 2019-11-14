@@ -33,8 +33,8 @@ const Card = props => {
     }
 
     return (
-        <div>
-            <h3>{props.data.question}</h3>
+        <div className='card'>
+            <h4>{props.data.question}</h4>
             {shuffledAnswers.map((item, index) => (<Answers key={index} answer={item} checkAnswer={checkAnswer}/>))}
         </div>
     )
